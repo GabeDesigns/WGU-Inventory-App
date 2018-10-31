@@ -1,0 +1,12 @@
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csprojAssemblyReference.cache
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddPart.resources
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddProduct.resources
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Welcome.resources
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csproj.GenerateResource.cache
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csproj.CoreCompileInputs.cache
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Chichen\source\repos\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
