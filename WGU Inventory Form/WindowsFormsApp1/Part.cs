@@ -62,7 +62,7 @@
             return partPrice;
         }
 
-        public void setpartPrice(double value)
+        public void setPartPrice(double value)
         {
             partPrice = value;
         }
