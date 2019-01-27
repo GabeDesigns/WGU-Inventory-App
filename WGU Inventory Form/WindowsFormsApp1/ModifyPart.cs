@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Welcome : Form
+    public partial class ModifyPart : Form
     {
-        public Welcome()
+        public ModifyPart()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productGroupBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
