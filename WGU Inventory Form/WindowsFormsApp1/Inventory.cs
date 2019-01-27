@@ -2,7 +2,7 @@
 using System.Data;
 using System.Linq;
 
-namespace WGUInventory
+namespace WindowsFormsApp1
 {
     public class Inventory
     {
@@ -46,7 +46,7 @@ namespace WGUInventory
 
         public static DataTable getProductsTable()
         {
-            //If column does not exist, add column.
+            //Checks and Adds Columns
             if (!allProductsTable.Columns.Contains("Product ID")) {
 
                 allProductsTable.Columns.Add("Product ID", typeof(int));
@@ -71,7 +71,7 @@ namespace WGUInventory
 
         }
 
-        //Adds product to products ArrayList.
+        //Adds product to array
         public static void addProduct(Product product)
         {
             product.setProductID(productCount);
@@ -87,7 +87,7 @@ namespace WGUInventory
             productCount++;
         }
 
-        //Removes product if the element at index is not null, then returns true.
+        //Removes product if the index is not null, then returns true.
         public static bool removeProduct(int searchedProductID)
         {
             for (int i = 0; i < products.Count(); i++)
@@ -106,12 +106,12 @@ namespace WGUInventory
         //Returns product being searched based on product ID.
         public static Product lookupProduct(int productID)
         {
-            for (int i = 0; i < products.Count(); i++)
+            foreach(var product in products)
             {
-                if (products[i].getProductID() == productID)
+                if (product.getProductID() == productID)
                 {
 
-                    return products[i];
+                    return product;
                 }
             }
             return null;
@@ -128,7 +128,7 @@ namespace WGUInventory
             products[index] = product;
         }
 
-        //Adds part to allParts ArrayList.
+        //Adds part to parts array
         public static void addPart(Part part)
         {
 
@@ -145,7 +145,7 @@ namespace WGUInventory
             partCount++;
         }
 
-        //If allParts arrayList contains part, part is deleted.
+        //If allParts arrayList contains part, part is deleted
         public static bool deletePart(Part part)
         {
 
@@ -171,13 +171,11 @@ namespace WGUInventory
         //Returns part based on part ID
         public static Part lookupPart(int searchedPartID)
         {
-            for (int i = 0; i < allParts.Count(); i++)
+            foreach (var part in allParts)
             {
-                if (allParts[i].getPartID() == searchedPartID)
+                if (part.getPartID() == searchedPartID)
                 {
-
-                    return allParts[i];
-
+                    return part;
                 }
             }
             return null;

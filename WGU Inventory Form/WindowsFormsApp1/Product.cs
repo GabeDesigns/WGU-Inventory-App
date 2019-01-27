@@ -2,7 +2,7 @@
 using System.Data;
 using System.Linq;
 
-namespace WGUInventory
+namespace WindowsFormsApp1
 {
     public class Product
     {
@@ -139,11 +139,11 @@ namespace WGUInventory
                 }
             }
 
-            for (int i = 0; i < associatedParts.Count(); i++)
+            foreach (var item in associatedParts)
             {
-                if (associatedParts[i].getPartID() == searchedPartID)
+                if (item.getPartID() == searchedPartID)
                 {
-                    associatedParts.Remove(associatedParts[i]);
+                    associatedParts.Remove(item);
                     return true;
                 }
             }
@@ -153,11 +153,11 @@ namespace WGUInventory
         //Search based on id
         public Part lookupAssociatedPart(int searchedPartID)
         {
-            for (int i = 0; i < associatedParts.Count(); i++)
+            foreach(var part in associatedParts)
             {
-                if (associatedParts[i].getPartID() == searchedPartID)
+                if (part.getPartID() == searchedPartID)
                 {
-                    return associatedParts[i];
+                    return part;
                 }
             }
             return null;

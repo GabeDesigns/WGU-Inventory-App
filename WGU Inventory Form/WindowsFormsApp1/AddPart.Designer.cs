@@ -56,6 +56,7 @@
             this.PartIDText.Size = new System.Drawing.Size(195, 42);
             this.PartIDText.TabIndex = 0;
             this.PartIDText.Text = "";
+            this.PartIDText.TextChanged += new System.EventHandler(this.PartIDText_TextChanged);
             // 
             // PartInvText
             // 
@@ -65,6 +66,7 @@
             this.PartInvText.Size = new System.Drawing.Size(195, 42);
             this.PartInvText.TabIndex = 1;
             this.PartInvText.Text = "";
+            this.PartInvText.TextChanged += new System.EventHandler(this.PartInvText_TextChanged);
             // 
             // PartNameText
             // 
@@ -74,6 +76,7 @@
             this.PartNameText.Size = new System.Drawing.Size(195, 42);
             this.PartNameText.TabIndex = 2;
             this.PartNameText.Text = "";
+            this.PartNameText.TextChanged += new System.EventHandler(this.PartNameText_TextChanged);
             // 
             // PartPriceText
             // 
@@ -83,6 +86,7 @@
             this.PartPriceText.Size = new System.Drawing.Size(195, 42);
             this.PartPriceText.TabIndex = 3;
             this.PartPriceText.Text = "";
+            this.PartPriceText.TextChanged += new System.EventHandler(this.PartPriceText_TextChanged);
             // 
             // PartMaxText
             // 
@@ -92,6 +96,7 @@
             this.PartMaxText.Size = new System.Drawing.Size(195, 42);
             this.PartMaxText.TabIndex = 4;
             this.PartMaxText.Text = "";
+            this.PartMaxText.TextChanged += new System.EventHandler(this.PartMaxText_TextChanged);
             // 
             // MachineIDText
             // 
@@ -101,6 +106,7 @@
             this.MachineIDText.Size = new System.Drawing.Size(195, 42);
             this.MachineIDText.TabIndex = 5;
             this.MachineIDText.Text = "";
+            this.MachineIDText.TextChanged += new System.EventHandler(this.MachineIDText_TextChanged);
             // 
             // PartMinText
             // 
@@ -110,6 +116,7 @@
             this.PartMinText.Size = new System.Drawing.Size(195, 42);
             this.PartMinText.TabIndex = 6;
             this.PartMinText.Text = "";
+            this.PartMinText.TextChanged += new System.EventHandler(this.PartMinText_TextChanged);
             // 
             // label1
             // 
@@ -204,6 +211,7 @@
             this.SaveBtn.TabIndex = 14;
             this.SaveBtn.Text = "Submit";
             this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // CancelBtn
             // 
@@ -214,6 +222,7 @@
             this.CancelBtn.TabIndex = 15;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // InHouseRadio
             // 
@@ -226,6 +235,7 @@
             this.InHouseRadio.TabStop = true;
             this.InHouseRadio.Text = "In House";
             this.InHouseRadio.UseVisualStyleBackColor = true;
+            this.InHouseRadio.CheckedChanged += new System.EventHandler(this.InHouseRadio_CheckedChanged);
             // 
             // OutSourceRadio
             // 
@@ -238,6 +248,7 @@
             this.OutSourceRadio.TabStop = true;
             this.OutSourceRadio.Text = "3rd Party";
             this.OutSourceRadio.UseVisualStyleBackColor = true;
+            this.OutSourceRadio.CheckedChanged += new System.EventHandler(this.OutSourceRadio_CheckedChanged);
             // 
             // AddPart
             // 
@@ -262,7 +273,7 @@
             this.Controls.Add(this.PartNameText);
             this.Controls.Add(this.PartInvText);
             this.Controls.Add(this.PartIDText);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1066, 829);
             this.Name = "AddPart";

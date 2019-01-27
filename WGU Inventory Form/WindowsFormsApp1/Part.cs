@@ -1,4 +1,4 @@
-﻿namespace WGUInventory
+﻿namespace WindowsFormsApp1
 {
     public abstract class Part
     {

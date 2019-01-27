@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WGUInventory
+namespace WindowsFormsApp1
 {
     //Inhouse class is a subclass of part.
     public class InHouse : Part
