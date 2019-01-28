@@ -22,3 +22,5 @@ C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFo
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyPart.resources
+C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyProduct.resources

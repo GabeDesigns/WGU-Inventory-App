@@ -83,6 +83,7 @@
             this.cancelBtn.TabIndex = 33;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // saveBtn
             // 
@@ -93,6 +94,7 @@
             this.saveBtn.TabIndex = 32;
             this.saveBtn.Text = "Submit";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // label7
             // 
@@ -117,6 +119,7 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Machine ID";
             this.label6.UseCompatibleTextRendering = true;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -186,6 +189,7 @@
             this.PartMinText.Size = new System.Drawing.Size(195, 42);
             this.PartMinText.TabIndex = 24;
             this.PartMinText.Text = "";
+            this.PartMinText.TextChanged += new System.EventHandler(this.PartMinText_TextChanged);
             // 
             // MachineIDText
             // 
@@ -195,6 +199,7 @@
             this.MachineIDText.Size = new System.Drawing.Size(195, 42);
             this.MachineIDText.TabIndex = 23;
             this.MachineIDText.Text = "";
+            this.MachineIDText.TextChanged += new System.EventHandler(this.MachineIDText_TextChanged);
             // 
             // PartMaxText
             // 
@@ -204,6 +209,7 @@
             this.PartMaxText.Size = new System.Drawing.Size(195, 42);
             this.PartMaxText.TabIndex = 22;
             this.PartMaxText.Text = "";
+            this.PartMaxText.TextChanged += new System.EventHandler(this.PartMaxText_TextChanged);
             // 
             // PartPriceText
             // 
@@ -213,6 +219,7 @@
             this.PartPriceText.Size = new System.Drawing.Size(195, 42);
             this.PartPriceText.TabIndex = 21;
             this.PartPriceText.Text = "";
+            this.PartPriceText.TextChanged += new System.EventHandler(this.PartPriceText_TextChanged);
             // 
             // PartNameText
             // 
@@ -222,6 +229,7 @@
             this.PartNameText.Size = new System.Drawing.Size(195, 42);
             this.PartNameText.TabIndex = 20;
             this.PartNameText.Text = "";
+            this.PartNameText.TextChanged += new System.EventHandler(this.PartNameText_TextChanged);
             // 
             // PartInvText
             // 
@@ -231,6 +239,7 @@
             this.PartInvText.Size = new System.Drawing.Size(195, 42);
             this.PartInvText.TabIndex = 19;
             this.PartInvText.Text = "";
+            this.PartInvText.TextChanged += new System.EventHandler(this.PartInvText_TextChanged);
             // 
             // PartIDText
             // 
@@ -240,6 +249,7 @@
             this.PartIDText.Size = new System.Drawing.Size(195, 42);
             this.PartIDText.TabIndex = 18;
             this.PartIDText.Text = "";
+            this.PartIDText.TextChanged += new System.EventHandler(this.PartIDText_TextChanged);
             // 
             // outsource
             // 
@@ -252,6 +262,7 @@
             this.outsource.TabStop = true;
             this.outsource.Text = "3rd Party";
             this.outsource.UseVisualStyleBackColor = true;
+            this.outsource.CheckedChanged += new System.EventHandler(this.outsource_CheckedChanged);
             // 
             // inHouse
             // 
@@ -264,6 +275,7 @@
             this.inHouse.TabStop = true;
             this.inHouse.Text = "In House";
             this.inHouse.UseVisualStyleBackColor = true;
+            this.inHouse.CheckedChanged += new System.EventHandler(this.inHouse_CheckedChanged);
             // 
             // ModifyPart
             // 
@@ -292,6 +304,7 @@
             this.Controls.Add(this.PartIDText);
             this.Name = "ModifyPart";
             this.Text = "Modify Form";
+            this.Load += new System.EventHandler(this.ModifyPart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

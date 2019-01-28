@@ -32,27 +32,29 @@ namespace WindowsFormsApp1
                 errorFound = true;
                 MachineIDText.BackColor = Color.Red;
             }
+            else
+            {
+                errorFound = false;
+            }
         }
 
         private void OutSourceRadio_CheckedChanged(object sender, EventArgs e)
         {
             label6.Text = "Company Name";
-            if (string.IsNullOrWhiteSpace(MachineIDText.Text) || int.TryParse(nameTextBox.Text, out int s))
+            if (string.IsNullOrWhiteSpace(MachineIDText.Text) || int.TryParse(PartNameText.Text, out int s))
             {
                 errorFound = true;
                 MachineIDText.BackColor = Color.Red;               
+            }
+            else
+            {
+                errorFound = false;
             }
         }
 
         private void PartIDText_TextChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(PartIDText.Text) || int.TryParse(PartIDText.Text, out int n))
-            {
-                errorFound = true;
-                PartIDText.BackColor = Color.Red;
-
-                MessageBox.Show("Please use only integers in ID field");
-            }
+            
         }
 
         private void PartNameText_TextChanged(object sender, EventArgs e)
@@ -65,8 +67,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Error, name cannot be empty or contain integers");
                 SaveBtn.Enabled = false;
             }
-        
-           
+            else
+            {
+                errorFound = false;
+            }
         }
 
         private void PartInvText_TextChanged(object sender, EventArgs e)
@@ -87,6 +91,10 @@ namespace WindowsFormsApp1
                 errorFound = true;
                 PartPriceText.BackColor = Color.Red;
             }
+            else
+            {
+                errorFound = false;
+            }
         }
 
         private void PartMaxText_TextChanged(object sender, EventArgs e)
@@ -95,6 +103,10 @@ namespace WindowsFormsApp1
             {
                 errorFound = true;
                 PartMaxText.BackColor = Color.Red;
+            }
+            else
+            {
+                errorFound = false;
             }
         }
 
@@ -113,6 +125,10 @@ namespace WindowsFormsApp1
                    MessageBox.Show("Machine ID requires numbers only");
                 }
             }
+            if(errorFound == false)
+            {
+                MessageBox.Show("no errors");
+            }
         }
 
         private void PartMinText_TextChanged(object sender, EventArgs e)
@@ -121,6 +137,10 @@ namespace WindowsFormsApp1
             {
                 errorFound = true;
                 PartMinText.BackColor = Color.Red;
+            }
+            else
+            {
+                errorFound = false;
             }
         }
 
@@ -131,51 +151,47 @@ namespace WindowsFormsApp1
             InHouse inHouse;
             Outsourced outsourced;
 
-           if(Convert.ToInt32(PartMaxText.Text) < Convert.ToInt32(PartMinText.Text))
+            if(errorFound == false)
             {
-                MessageBox.Show("Your Min Qty is greater than the Max Qty value");
-            }
-           else
-            {
-                if (errorFound == true)
+                if (Convert.ToInt32(PartMaxText.Text) < Convert.ToInt32(PartMinText.Text))
                 {
-                    SaveBtn.Enabled = false;
-                    MessageBox.Show("Please go back and review your input" + e);
+                    MessageBox.Show("Your Min Qty is greater than the Max Qty value");
                 }
-
-                if (InHouseRadio.Checked)
+                else
                 {
-                    inHouse = new InHouse();
+                    if (InHouseRadio.Checked)
+                    {
+                        inHouse = new InHouse();
+                        
+                        inHouse.setName(PartNameText.Text);
+                        inHouse.setPartPrice(Convert.ToDouble(PartPriceText.Text));
+                        inHouse.setInStock(Convert.ToInt32(PartInvText.Text));
+                        inHouse.setPartQtyMin(Convert.ToInt32(PartMinText.Text));
+                        inHouse.setPartQtyMax(Convert.ToInt32(PartMaxText.Text));
+                        inHouse.setMachineID(Convert.ToInt32(MachineIDText.Text));
 
-                    inHouse.setPartID(Convert.ToInt16(PartIDText.Text));
-                    inHouse.setName(PartNameText.Text);
-                    inHouse.setPartPrice(Convert.ToDouble(PartPriceText.Text));
-                    inHouse.setInStock(Convert.ToInt32(PartInvText.Text));
-                    inHouse.setPartQtyMin(Convert.ToInt32(PartMinText.Text));
-                    inHouse.setPartQtyMax(Convert.ToInt32(PartMaxText.Text));
-                    inHouse.setMachineID(Convert.ToInt32(MachineIDText.Text));
+                        Inventory.addPart(inHouse);
+                    }
 
-                    Inventory.addPart(inHouse);
+                    else if (OutSourceRadio.Checked)
+                    {
+                        outsourced = new Outsourced();
+
+                        outsourced.setPartID(Convert.ToInt32(PartIDText.Text));
+                        outsourced.setName(PartNameText.Text.ToString());
+                        outsourced.setPartPrice(Convert.ToDouble(PartPriceText.Text));
+                        outsourced.setInStock(Convert.ToInt32(PartInvText.Text));
+                        outsourced.setPartQtyMin(Convert.ToInt32(PartMinText.Text));
+                        outsourced.setPartQtyMax(Convert.ToInt32(PartMaxText.Text));
+                        outsourced.setCompanyName(MachineIDText.Text);
+
+                        Inventory.addPart(outsourced);
+                    }
+
+                    this.Hide();
+
+                    welcome.ShowDialog();
                 }
-
-                else if (OutSourceRadio.Checked)
-                {
-                    outsourced = new Outsourced();
-
-                    outsourced.setPartID(Convert.ToInt16(PartIDText.Text));
-                    outsourced.setName(PartNameText.Text.ToString());
-                    outsourced.setPartPrice(Convert.ToDouble(PartPriceText.Text));
-                    outsourced.setInStock(Convert.ToInt32(PartInvText.Text));
-                    outsourced.setPartQtyMin(Convert.ToInt32(PartMinText.Text));
-                    outsourced.setPartQtyMax(Convert.ToInt32(PartMaxText.Text));
-                    outsourced.setCompanyName(MachineIDText.Text);
-
-                    Inventory.addPart(outsourced);
-                }
-
-                this.Hide();
-
-                welcome.ShowDialog();
             }
         }
 

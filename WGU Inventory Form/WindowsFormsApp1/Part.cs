@@ -87,7 +87,7 @@
             PartQtyMin = value;
         }
 
-        public int getMax()
+        public int getPartQtyMax()
         {
             return PartQtyMax;
         }

@@ -6,7 +6,7 @@ namespace WindowsFormsApp1
 {
     public class Inventory
     {
-        public static List<Product> products = new List<Product>();
+        public static List<Product> allProducts = new List<Product>();
         public static List<Part> allParts = new List<Part>();
         public static int partCount = 0;
         public static int productCount = 0;
@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         private static DataTable allProductsTable = new DataTable();
 
 
-        public static DataTable getAllPartsDataTable()
+        public static DataTable getAllPartsTable()
         {
             //If column does not exist, add column.
             if (!allPartsTable.Columns.Contains("Part #")) {
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
         public static void addProduct(Product product)
         {
             product.setProductID(productCount);
-            products.Add(product);
+            allProducts.Add(product);
 
             allProductsTable.Rows.Add(
                 product.getProductID(),
@@ -90,12 +90,12 @@ namespace WindowsFormsApp1
         //Removes product if the index is not null, then returns true.
         public static bool removeProduct(int searchedProductID)
         {
-            for (int i = 0; i < products.Count(); i++)
+            for (int i = 0; i < allProducts.Count(); i++)
             {
-                if (products[i].getProductID() == searchedProductID)
+                if (allProducts[i].getProductID() == searchedProductID)
                 {
-                    allProductsTable.Rows[products[i].getProductID()].Delete();
-                    products.Remove(products[i]);
+                    allProductsTable.Rows[allProducts[i].getProductID()].Delete();
+                    allProducts.Remove(allProducts[i]);
                     return true;
                 }
 
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
         //Returns product being searched based on product ID.
         public static Product lookupProduct(int productID)
         {
-            foreach(var product in products)
+            foreach(var product in allProducts)
             {
                 if (product.getProductID() == productID)
                 {
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             allProductsTable.Rows[index][2] = product.getProductPrice();
             allProductsTable.Rows[index][3] = product.getInStock();
 
-            products[index] = product;
+            allProducts[index] = product;
         }
 
         //Adds part to parts array

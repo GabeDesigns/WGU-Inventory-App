@@ -39,16 +39,16 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProductMinText = new System.Windows.Forms.RichTextBox();
-            this.ProductMaxText = new System.Windows.Forms.RichTextBox();
+            this.ID = new System.Windows.Forms.Label();
             this.ProductPriceText = new System.Windows.Forms.RichTextBox();
-            this.ProductNameText = new System.Windows.Forms.RichTextBox();
+            this.ProductMaxText = new System.Windows.Forms.RichTextBox();
             this.ProductInvText = new System.Windows.Forms.RichTextBox();
+            this.ProductMinText = new System.Windows.Forms.RichTextBox();
+            this.ProductNameText = new System.Windows.Forms.RichTextBox();
             this.ProductIDText = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.associatedPartsTable)).BeginInit();
@@ -81,6 +81,7 @@
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancelBtn
             // 
@@ -91,6 +92,7 @@
             this.cancelBtn.TabIndex = 2;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // deleteBtn
             // 
@@ -101,6 +103,7 @@
             this.deleteBtn.TabIndex = 1;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // associatedPartsTable
             // 
@@ -117,6 +120,7 @@
             this.associatedPartsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.associatedPartsTable.Size = new System.Drawing.Size(624, 203);
             this.associatedPartsTable.TabIndex = 0;
+            this.associatedPartsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.associatedPartsTable_CellContentClick);
             // 
             // allPartsGroupBox
             // 
@@ -160,6 +164,7 @@
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(208, 35);
             this.searchTextBox.TabIndex = 1;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // searchBtn
             // 
@@ -170,6 +175,7 @@
             this.searchBtn.TabIndex = 2;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // addBtn
             // 
@@ -180,145 +186,139 @@
             this.addBtn.TabIndex = 3;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(68, 643);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(91, 655);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 34);
+            this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 31;
             this.label6.Text = "Min Qty";
-            this.label6.UseCompatibleTextRendering = true;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 577);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 34);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Max Qty";
-            this.label5.UseCompatibleTextRendering = true;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 508);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(87, 581);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 34);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Product Price";
-            this.label4.UseCompatibleTextRendering = true;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Size = new System.Drawing.Size(86, 25);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Max Qty";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 435);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(104, 328);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 34);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Product Inv #";
-            this.label3.UseCompatibleTextRendering = true;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Name";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 360);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 416);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 34);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Product";
-            this.label2.UseCompatibleTextRendering = true;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Size = new System.Drawing.Size(54, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Inv #";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 281);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 495);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 34);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Product ID";
-            this.label1.UseCompatibleTextRendering = true;
-            this.label1.UseWaitCursor = true;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(56, 25);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Price";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // ProductMinText
+            // ID
             // 
-            this.ProductMinText.Location = new System.Drawing.Point(231, 635);
-            this.ProductMinText.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductMinText.Name = "ProductMinText";
-            this.ProductMinText.Size = new System.Drawing.Size(195, 42);
-            this.ProductMinText.TabIndex = 25;
-            this.ProductMinText.Text = "";
-            this.ProductMinText.TextChanged += new System.EventHandler(this.MachineIDText_TextChanged);
-            // 
-            // ProductMaxText
-            // 
-            this.ProductMaxText.Location = new System.Drawing.Point(231, 569);
-            this.ProductMaxText.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductMaxText.Name = "ProductMaxText";
-            this.ProductMaxText.Size = new System.Drawing.Size(195, 42);
-            this.ProductMaxText.TabIndex = 24;
-            this.ProductMaxText.Text = "";
-            this.ProductMaxText.TextChanged += new System.EventHandler(this.PartMaxText_TextChanged);
+            this.ID.AutoSize = true;
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.Location = new System.Drawing.Point(78, 241);
+            this.ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(103, 25);
+            this.ID.TabIndex = 26;
+            this.ID.Text = "Product ID";
+            this.ID.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // ProductPriceText
             // 
-            this.ProductPriceText.Location = new System.Drawing.Point(231, 500);
+            this.ProductPriceText.Location = new System.Drawing.Point(192, 482);
             this.ProductPriceText.Margin = new System.Windows.Forms.Padding(2);
             this.ProductPriceText.Name = "ProductPriceText";
-            this.ProductPriceText.Size = new System.Drawing.Size(195, 42);
-            this.ProductPriceText.TabIndex = 23;
+            this.ProductPriceText.Size = new System.Drawing.Size(187, 49);
+            this.ProductPriceText.TabIndex = 25;
             this.ProductPriceText.Text = "";
-            this.ProductPriceText.TextChanged += new System.EventHandler(this.PartPriceText_TextChanged);
+            this.ProductPriceText.TextChanged += new System.EventHandler(this.ProductPriceText_TextChanged);
             // 
-            // ProductNameText
+            // ProductMaxText
             // 
-            this.ProductNameText.Location = new System.Drawing.Point(231, 352);
-            this.ProductNameText.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductNameText.Name = "ProductNameText";
-            this.ProductNameText.Size = new System.Drawing.Size(195, 42);
-            this.ProductNameText.TabIndex = 22;
-            this.ProductNameText.Text = "";
-            this.ProductNameText.TextChanged += new System.EventHandler(this.PartNameText_TextChanged);
+            this.ProductMaxText.Location = new System.Drawing.Point(192, 567);
+            this.ProductMaxText.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductMaxText.Name = "ProductMaxText";
+            this.ProductMaxText.Size = new System.Drawing.Size(187, 49);
+            this.ProductMaxText.TabIndex = 24;
+            this.ProductMaxText.Text = "";
+            this.ProductMaxText.TextChanged += new System.EventHandler(this.ProductMaxText_TextChanged);
             // 
             // ProductInvText
             // 
-            this.ProductInvText.Location = new System.Drawing.Point(231, 427);
+            this.ProductInvText.Location = new System.Drawing.Point(192, 402);
             this.ProductInvText.Margin = new System.Windows.Forms.Padding(2);
             this.ProductInvText.Name = "ProductInvText";
-            this.ProductInvText.Size = new System.Drawing.Size(195, 42);
-            this.ProductInvText.TabIndex = 21;
+            this.ProductInvText.Size = new System.Drawing.Size(187, 49);
+            this.ProductInvText.TabIndex = 23;
             this.ProductInvText.Text = "";
-            this.ProductInvText.TextChanged += new System.EventHandler(this.PartInvText_TextChanged);
+            this.ProductInvText.TextChanged += new System.EventHandler(this.ProductInvText_TextChanged);
+            // 
+            // ProductMinText
+            // 
+            this.ProductMinText.Location = new System.Drawing.Point(192, 641);
+            this.ProductMinText.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductMinText.Name = "ProductMinText";
+            this.ProductMinText.Size = new System.Drawing.Size(187, 49);
+            this.ProductMinText.TabIndex = 22;
+            this.ProductMinText.Text = "";
+            this.ProductMinText.TextChanged += new System.EventHandler(this.ProductMinText_TextChanged);
+            // 
+            // ProductNameText
+            // 
+            this.ProductNameText.Location = new System.Drawing.Point(192, 316);
+            this.ProductNameText.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductNameText.Name = "ProductNameText";
+            this.ProductNameText.Size = new System.Drawing.Size(187, 49);
+            this.ProductNameText.TabIndex = 21;
+            this.ProductNameText.Text = "";
+            this.ProductNameText.TextChanged += new System.EventHandler(this.ProductNameText_TextChanged);
             // 
             // ProductIDText
             // 
-            this.ProductIDText.Location = new System.Drawing.Point(231, 273);
+            this.ProductIDText.Location = new System.Drawing.Point(192, 228);
             this.ProductIDText.Margin = new System.Windows.Forms.Padding(2);
             this.ProductIDText.Name = "ProductIDText";
-            this.ProductIDText.Size = new System.Drawing.Size(195, 42);
+            this.ProductIDText.Size = new System.Drawing.Size(187, 49);
             this.ProductIDText.TabIndex = 20;
             this.ProductIDText.Text = "";
-            this.ProductIDText.TextChanged += new System.EventHandler(this.PartIDText_TextChanged);
+            this.ProductIDText.TextChanged += new System.EventHandler(this.ProductIDText_TextChanged);
             // 
             // ModifyProduct
             // 
@@ -326,16 +326,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 922);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ProductMinText);
-            this.Controls.Add(this.ProductMaxText);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.ProductPriceText);
-            this.Controls.Add(this.ProductNameText);
+            this.Controls.Add(this.ProductMaxText);
             this.Controls.Add(this.ProductInvText);
+            this.Controls.Add(this.ProductMinText);
+            this.Controls.Add(this.ProductNameText);
             this.Controls.Add(this.ProductIDText);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.allPartsGroupBox);
@@ -365,16 +365,16 @@
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox ProductMinText;
-        private System.Windows.Forms.RichTextBox ProductMaxText;
+        private System.Windows.Forms.Label ID;
         private System.Windows.Forms.RichTextBox ProductPriceText;
-        private System.Windows.Forms.RichTextBox ProductNameText;
+        private System.Windows.Forms.RichTextBox ProductMaxText;
         private System.Windows.Forms.RichTextBox ProductInvText;
+        private System.Windows.Forms.RichTextBox ProductMinText;
+        private System.Windows.Forms.RichTextBox ProductNameText;
         private System.Windows.Forms.RichTextBox ProductIDText;
     }
 }

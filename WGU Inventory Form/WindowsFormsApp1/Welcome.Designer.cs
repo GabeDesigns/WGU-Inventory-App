@@ -77,6 +77,7 @@
             this.AddProduct.TabIndex = 5;
             this.AddProduct.Text = "Add";
             this.AddProduct.UseVisualStyleBackColor = true;
+            this.AddProduct.Click += new System.EventHandler(this.AddProduct_Click);
             // 
             // modifyProduct
             // 
@@ -87,6 +88,7 @@
             this.modifyProduct.TabIndex = 4;
             this.modifyProduct.Text = "Modify";
             this.modifyProduct.UseVisualStyleBackColor = true;
+            this.modifyProduct.Click += new System.EventHandler(this.modifyProduct_Click);
             // 
             // deleteProduct
             // 
@@ -97,6 +99,7 @@
             this.deleteProduct.TabIndex = 3;
             this.deleteProduct.Text = "Delete";
             this.deleteProduct.UseVisualStyleBackColor = true;
+            this.deleteProduct.Click += new System.EventHandler(this.deleteProduct_Click);
             // 
             // searchProduct
             // 
@@ -107,6 +110,7 @@
             this.searchProduct.TabIndex = 2;
             this.searchProduct.Text = "Search";
             this.searchProduct.UseVisualStyleBackColor = true;
+            this.searchProduct.Click += new System.EventHandler(this.searchProduct_Click);
             // 
             // searchProductTextBox
             // 
@@ -115,6 +119,7 @@
             this.searchProductTextBox.Name = "searchProductTextBox";
             this.searchProductTextBox.Size = new System.Drawing.Size(208, 39);
             this.searchProductTextBox.TabIndex = 1;
+            this.searchProductTextBox.TextChanged += new System.EventHandler(this.searchProductTextBox_TextChanged);
             // 
             // productsTable
             // 
@@ -133,6 +138,7 @@
             this.productsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.productsTable.Size = new System.Drawing.Size(681, 385);
             this.productsTable.TabIndex = 0;
+            this.productsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsTable_CellContentClick);
             // 
             // modifyPart
             // 
@@ -143,6 +149,7 @@
             this.modifyPart.TabIndex = 2;
             this.modifyPart.Text = "Modify";
             this.modifyPart.UseVisualStyleBackColor = true;
+            this.modifyPart.Click += new System.EventHandler(this.modifyPart_Click);
             // 
             // addPart
             // 
@@ -153,6 +160,7 @@
             this.addPart.TabIndex = 1;
             this.addPart.Text = "Add";
             this.addPart.UseVisualStyleBackColor = true;
+            this.addPart.Click += new System.EventHandler(this.addPart_Click);
             // 
             // deletePart
             // 
@@ -163,6 +171,7 @@
             this.deletePart.TabIndex = 3;
             this.deletePart.Text = "Delete";
             this.deletePart.UseVisualStyleBackColor = true;
+            this.deletePart.Click += new System.EventHandler(this.deletePart_Click);
             // 
             // partsTable
             // 
@@ -182,6 +191,7 @@
             this.partsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.partsTable.Size = new System.Drawing.Size(681, 385);
             this.partsTable.TabIndex = 0;
+            this.partsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.partsTable_CellContentClick);
             // 
             // searchPart
             // 
@@ -192,6 +202,7 @@
             this.searchPart.TabIndex = 4;
             this.searchPart.Text = "Search";
             this.searchPart.UseVisualStyleBackColor = true;
+            this.searchPart.Click += new System.EventHandler(this.searchPart_Click);
             // 
             // searchPartTextBox
             // 
@@ -200,6 +211,7 @@
             this.searchPartTextBox.Name = "searchPartTextBox";
             this.searchPartTextBox.Size = new System.Drawing.Size(208, 39);
             this.searchPartTextBox.TabIndex = 5;
+            this.searchPartTextBox.TextChanged += new System.EventHandler(this.searchPartTextBox_TextChanged);
             // 
             // partGroupBox
             // 
@@ -239,6 +251,7 @@
             this.Controls.Add(this.partGroupBox);
             this.Name = "Welcome";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.productGroupBox.ResumeLayout(false);
             this.productGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsTable)).EndInit();

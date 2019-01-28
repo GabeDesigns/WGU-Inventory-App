@@ -50,6 +50,7 @@
             // 
             // PartIDText
             // 
+            this.PartIDText.Enabled = false;
             this.PartIDText.Location = new System.Drawing.Point(314, 125);
             this.PartIDText.Margin = new System.Windows.Forms.Padding(2);
             this.PartIDText.Name = "PartIDText";
@@ -227,6 +228,7 @@
             // InHouseRadio
             // 
             this.InHouseRadio.AutoSize = true;
+            this.InHouseRadio.Checked = true;
             this.InHouseRadio.Location = new System.Drawing.Point(410, 60);
             this.InHouseRadio.Margin = new System.Windows.Forms.Padding(2);
             this.InHouseRadio.Name = "InHouseRadio";

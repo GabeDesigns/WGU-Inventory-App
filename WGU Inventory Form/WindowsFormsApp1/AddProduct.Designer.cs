@@ -65,7 +65,7 @@
             this.ProductIDText.ReadOnly = true;
             this.ProductIDText.Size = new System.Drawing.Size(187, 49);
             this.ProductIDText.TabIndex = 0;
-            this.ProductIDText.Text = "Auto Gen.";
+            this.ProductIDText.Text = "Auto Generated";
             this.ProductIDText.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // ProductNameText
@@ -76,6 +76,7 @@
             this.ProductNameText.Size = new System.Drawing.Size(187, 49);
             this.ProductNameText.TabIndex = 1;
             this.ProductNameText.Text = "";
+            this.ProductNameText.TextChanged += new System.EventHandler(this.ProductNameText_TextChanged);
             // 
             // ProductMinText
             // 
@@ -85,6 +86,7 @@
             this.ProductMinText.Size = new System.Drawing.Size(187, 49);
             this.ProductMinText.TabIndex = 2;
             this.ProductMinText.Text = "";
+            this.ProductMinText.TextChanged += new System.EventHandler(this.ProductMinText_TextChanged);
             // 
             // ProductInvText
             // 
@@ -94,6 +96,7 @@
             this.ProductInvText.Size = new System.Drawing.Size(187, 49);
             this.ProductInvText.TabIndex = 4;
             this.ProductInvText.Text = "";
+            this.ProductInvText.TextChanged += new System.EventHandler(this.ProductInvText_TextChanged);
             // 
             // ProductMaxText
             // 
@@ -103,6 +106,7 @@
             this.ProductMaxText.Size = new System.Drawing.Size(187, 49);
             this.ProductMaxText.TabIndex = 5;
             this.ProductMaxText.Text = "";
+            this.ProductMaxText.TextChanged += new System.EventHandler(this.ProductMaxText_TextChanged);
             // 
             // ProductPriceText
             // 
@@ -112,6 +116,7 @@
             this.ProductPriceText.Size = new System.Drawing.Size(187, 49);
             this.ProductPriceText.TabIndex = 6;
             this.ProductPriceText.Text = "";
+            this.ProductPriceText.TextChanged += new System.EventHandler(this.ProductPriceText_TextChanged);
             // 
             // ID
             // 
@@ -221,6 +226,7 @@
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancelBtn
             // 
@@ -231,6 +237,7 @@
             this.cancelBtn.TabIndex = 2;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // deleteBtn
             // 
@@ -241,6 +248,7 @@
             this.deleteBtn.TabIndex = 1;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // associatedPartsTable
             // 
@@ -257,6 +265,7 @@
             this.associatedPartsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.associatedPartsTable.Size = new System.Drawing.Size(624, 203);
             this.associatedPartsTable.TabIndex = 0;
+            this.associatedPartsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.associatedPartsTable_CellContentClick);
             // 
             // allPartsTable
             // 
@@ -290,6 +299,7 @@
             this.allParts_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.allParts_Table.Size = new System.Drawing.Size(624, 240);
             this.allParts_Table.TabIndex = 0;
+            this.allParts_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allParts_Table_CellContentClick);
             // 
             // searchTextBox
             // 
@@ -298,6 +308,7 @@
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(208, 26);
             this.searchTextBox.TabIndex = 1;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // searchBtn
             // 
@@ -308,6 +319,7 @@
             this.searchBtn.TabIndex = 2;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // addBtn
             // 
@@ -318,6 +330,7 @@
             this.addBtn.TabIndex = 3;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // AddProduct
             // 
