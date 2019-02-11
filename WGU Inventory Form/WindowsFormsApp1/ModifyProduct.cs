@@ -105,11 +105,17 @@ namespace WindowsFormsApp1
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            int productMax;
+            int productMin;
+
             Welcome welcome = new Welcome();
 
-            if(errorFound == false)
+            if (errorFound == false)
             {
-                if (Convert.ToInt32(ProductMaxText.Text) < Convert.ToInt32(ProductMinText.Text))
+                productMax = Convert.ToInt32(ProductMaxText.Text);
+                productMin = Convert.ToInt32(ProductMinText.Text);
+
+                if (productMax < productMin)
                 {
                     MessageBox.Show("Your min value is greater than your max value");
                 }
@@ -120,10 +126,18 @@ namespace WindowsFormsApp1
                 else
                 {
                     Inventory.allProducts[product].setProductName(ProductNameText.Text);
-                    Inventory.allProducts[product].setProductPrice(Convert.ToDouble(ProductPriceText.Text));
-                    Inventory.allProducts[product].setInStock(Convert.ToInt32(ProductInvText.Text));
-                    Inventory.allProducts[product].setProductQtyMin(Convert.ToInt32(ProductMinText.Text));
-                    Inventory.allProducts[product].setProductQtyMax(Convert.ToInt32(ProductMaxText.Text));
+                    Inventory.allProducts[product].setProductPrice(
+                        Convert.ToDouble(ProductPriceText.Text)
+                    );
+                    Inventory.allProducts[product].setInStock(
+                        Convert.ToInt32(ProductInvText.Text)
+                    );
+                    Inventory.allProducts[product].setProductQtyMin(
+                        Convert.ToInt32(ProductMinText.Text)
+                    );
+                    Inventory.allProducts[product].setProductQtyMax(
+                        Convert.ToInt32(ProductMaxText.Text)
+                    );
 
                     Inventory.updateProduct(product, Inventory.allProducts[product]);
 

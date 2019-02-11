@@ -24,3 +24,17 @@ C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFo
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyPart.resources
 C:\Users\Gabriel\Documents\GitHub\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyProduct.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csprojAssemblyReference.cache
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddPart.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddProduct.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyPart.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyProduct.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Welcome.resources
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csproj.GenerateResource.cache
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WGUInventory.csproj.CoreCompileInputs.cache
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\grosales\Documents\WGU-Inventory-App\WGU Inventory Form\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

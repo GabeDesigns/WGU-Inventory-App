@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
 
         private void ProductNameText_TextChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(ProductNameText.Text) || int.TryParse(ProductNameText.Text, out int n)) //Turns textbox salmon if empty or if integer.
+            if(string.IsNullOrWhiteSpace(ProductNameText.Text) || int.TryParse(ProductNameText.Text, out int n))
             {
                 ProductNameText.BackColor = Color.Red;
                 errorFound = true;
